@@ -2,32 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.swiper-pagination-bullet {
+    border-radius: 0% !important;
+    background-color: #05A845 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+.ps-menu-label .css-12w9als {
+    @apply !text-gray-700 !text-xl;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+/* For WebKit based browsers (e.g., Chrome, Safari) */
+*::-webkit-scrollbar {
+    width: 5px !important;
+    /* width of the scrollbar */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* color of the track */
+}
+
+*::-webkit-scrollbar-thumb {
+    @apply !bg-primary/90;
+    /* color of the thumb */
+    border-radius: 6px;
+    /* roundness of the thumb */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    @apply !bg-primary
+    /* color of the thumb on hover */
 }
